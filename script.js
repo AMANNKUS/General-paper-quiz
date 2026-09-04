@@ -30,7 +30,7 @@ const questionNav = document.getElementById("question-nav");
 const totalQuestionsLabel = document.getElementById("total-questions-label");
 
 function initializeQuiz() {
-  if (typeof questions === "undefined" || questions.length === 0) {
+  if (typeof questions === "undefined" || !Array.isArray(questions) || questions.length === 0) {
     startScreen.innerHTML = `
       <h2>Questions could not be loaded</h2>
       <p>Please check your questions.js file.</p>
@@ -39,6 +39,8 @@ function initializeQuiz() {
   }
 
   totalQuestionsLabel.textContent = `Questions: ${questions.length}`;
+  progressText.textContent = `Question 1 of ${questions.length}`;
+  updateTimerDisplay();
   createQuestionNavigation();
 }
 
@@ -51,6 +53,10 @@ function startQuiz() {
 }
 
 function startTimer() {
+  if (timerInterval !== null) {
+    clearInterval(timerInterval);
+  }
+
   updateTimerDisplay();
 
   timerInterval = setInterval(function () {
@@ -99,7 +105,7 @@ function loadQuestion() {
     optionsBox.appendChild(option);
   }
 
-  document.querySelectorAll("input[name='answer']").forEach(input => {
+  document.querySelectorAll("input[name='answer']").forEach(function (input) {
     input.addEventListener("change", function () {
       userAnswers[currentQuestion] = this.value;
       updateQuestionNavigation();
@@ -127,10 +133,11 @@ function updateProgress() {
 function createQuestionNavigation() {
   questionNav.innerHTML = "";
 
-  questions.forEach((_, index) => {
+  questions.forEach(function (_, index) {
     const btn = document.createElement("button");
     btn.textContent = index + 1;
     btn.className = "nav-btn";
+    btn.type = "button";
 
     btn.addEventListener("click", function () {
       currentQuestion = index;
@@ -145,7 +152,7 @@ function createQuestionNavigation() {
 function updateQuestionNavigation() {
   const navButtons = document.querySelectorAll(".nav-btn");
 
-  navButtons.forEach((btn, index) => {
+  navButtons.forEach(function (btn, index) {
     btn.classList.remove("current", "answered");
 
     if (userAnswers[index]) {
@@ -158,19 +165,21 @@ function updateQuestionNavigation() {
   });
 }
 
-nextBtn.addEventListener("click", function () {
+function goToNextQuestion() {
   if (currentQuestion < questions.length - 1) {
     currentQuestion++;
     loadQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-});
+}
 
-prevBtn.addEventListener("click", function () {
+function goToPreviousQuestion() {
   if (currentQuestion > 0) {
     currentQuestion--;
     loadQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-});
+}
 
 function confirmSubmit() {
   const answeredCount = Object.keys(userAnswers).length;
@@ -194,7 +203,7 @@ function submitQuiz(autoSubmitted) {
 
   let score = 0;
 
-  questions.forEach((q, index) => {
+  questions.forEach(function (q, index) {
     if (userAnswers[index] === q.correctAnswer) {
       score++;
     }
@@ -224,6 +233,8 @@ function submitQuiz(autoSubmitted) {
       <p><strong>Submission:</strong> ${autoSubmitted ? "Automatically submitted when time ended" : "Submitted by student"}</p>
     </div>
   `;
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function formatTime(seconds) {
@@ -249,19 +260,24 @@ function reviewAnswers() {
 
   reviewBox.innerHTML = "<h2>Answer Review</h2>";
 
-  questions.forEach((q, index) => {
+  questions.forEach(function (q, index) {
     const userAnswer = userAnswers[index] || "Not answered";
     const correctAnswer = q.correctAnswer;
 
     const item = document.createElement("div");
     item.className = "review-item";
 
+    const userAnswerText =
+      userAnswer === "Not answered"
+        ? "Not answered"
+        : `${userAnswer}. ${q.options[userAnswer]}`;
+
     item.innerHTML = `
       <h3>Question ${index + 1}</h3>
       <p>${q.question}</p>
 
       <p><strong>Your Answer:</strong> 
-      <span class="${userAnswer === correctAnswer ? "correct" : "wrong"}">${userAnswer}</span></p>
+      <span class="${userAnswer === correctAnswer ? "correct" : "wrong"}">${userAnswerText}</span></p>
 
       <p><strong>Correct Answer:</strong> 
       <span class="correct">${correctAnswer}. ${q.options[correctAnswer]}</span></p>
@@ -270,7 +286,7 @@ function reviewAnswers() {
 
       <p><strong>Why Other Options Are Incorrect:</strong></p>
       <ul>
-        ${Object.keys(q.options).map(key => {
+        ${Object.keys(q.options).map(function (key) {
           if (key !== correctAnswer) {
             return `<li><strong>${key}. ${q.options[key]}:</strong> ${q.rationalesIncorrect[key] || "No rationale provided."}</li>`;
           }
@@ -281,9 +297,13 @@ function reviewAnswers() {
 
     reviewBox.appendChild(item);
   });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 startBtn.addEventListener("click", startQuiz);
+nextBtn.addEventListener("click", goToNextQuestion);
+prevBtn.addEventListener("click", goToPreviousQuestion);
 submitBtn.addEventListener("click", confirmSubmit);
 reviewBtn.addEventListener("click", reviewAnswers);
 

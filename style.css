@@ -5,6 +5,71 @@ body {
   padding: 20px;
 }
 
+/* PASSWORD GATE */
+.password-gate {
+  min-height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fb;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.password-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #d9e4f2;
+  border-radius: 14px;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.password-box h2 {
+  color: #0b2c5f;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.password-box p {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.password-box input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  margin: 20px 0;
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.password-box button {
+  background: #0b2c5f;
+  color: #ffffff;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.password-box button:hover {
+  background: #174a99;
+}
+
+.password-error {
+  color: red;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* MAIN QUIZ CONTAINER */
 .quiz-container {
   max-width: 950px;
   margin: auto;
@@ -222,7 +287,25 @@ button:hover {
   border-top: 1px solid #ddd;
 }
 
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .password-gate {
+    min-height: calc(100vh - 20px);
+    padding: 15px;
+  }
+
+  .password-box {
+    padding: 28px 20px;
+  }
+
+  .password-box h2 {
+    font-size: 24px;
+  }
+
   .quiz-container {
     padding: 15px;
   }
