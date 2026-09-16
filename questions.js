@@ -48,18 +48,22 @@ const questions = [
 },
 
 // Question 4
-{
-  question: "A 16-year-old girl who has experienced sexual abuse is brought to the health facility for care. Which actions would help the nurse gain her trust and encourage her to speak freely?",
+  {
+  question: "A 16-year-old girl who has experienced sexual abuse is brought to the health facility for care. The nurse wants to gain her trust and encourage her to speak freely. Which combination of the following nursing actions is most appropriate?\n\nI. Begin with a simple, general and non-threatening conversation.\nII. Ensure privacy and reassure her that the discussion will be handled confidentially.\nIII. Start by asking direct and detailed questions about the abuse immediately.",
+
   options: {
-    A: "I and II.",
-    B: "I and III.",
-    C: "II and III."
+    A: "I and II only.",
+    B: "I and III only.",
+    C: "II and III only."
   },
+
   correctAnswer: "A",
-  rationaleCorrect: "Starting with a general, non-threatening conversation helps the client feel safe and less pressured. Ensuring privacy also promotes trust, dignity, and confidentiality, which are essential when caring for survivors of sexual abuse.",
+
+  rationaleCorrect: "Beginning with a simple, general and non-threatening conversation helps the girl feel safe and less pressured. Ensuring privacy and confidentiality also promotes trust, dignity and openness, which are important when caring for survivors of sexual abuse.",
+
   rationalesIncorrect: {
-    B: "Beginning with a general conversation is appropriate, but asking direct questions about the abuse immediately may frighten or silence the client.",
-    C: "Privacy is important, but direct questioning at the beginning may make the client uncomfortable and reduce cooperation."
+    B: "Beginning with a general conversation is appropriate, but asking direct and detailed questions about the abuse immediately may frighten the client, increase distress and make her less willing to speak.",
+    C: "Ensuring privacy is appropriate, but starting with direct and detailed questions about the abuse immediately may make the client feel pressured or unsafe. The nurse should first create a calm, private and supportive environment."
   }
 },
 
@@ -496,20 +500,24 @@ const questions = [
 
 // Question 32
 {
-  question: "A senior midwife tells student nurses that protecting patients means recognizing unsafe situations early, acting quickly, and reporting risks before harm occurs. Which actions best demonstrate this responsibility?",
+  question: "A senior midwife tells student nurses that protecting patients means recognising unsafe situations early, acting quickly and reporting risks before harm occurs. Which combination of the following actions best demonstrates this responsibility?\n\nI. Collaborating with other health workers to promote safe care.\nII. Taking prompt action when a danger to the patient is identified.\nIII. Reporting unsafe situations or risks before harm occurs.\nIV. Maintaining accountability, honesty and trustworthiness in professional practice.",
+
   options: {
-    A: "I, II and III.",
+    A: "I, II and III only.",
     B: "I, II, III and IV.",
-    C: "II and IV."
+    C: "II and IV only."
   },
+
   correctAnswer: "B",
-  rationaleCorrect: "Patient safety is a broad professional responsibility. It includes teamwork, quick action when danger is identified, reporting unsafe situations, and maintaining trustworthy and accountable professional practice.",
+
+  rationaleCorrect: "Patient safety is a broad professional responsibility. It includes teamwork, taking prompt action when danger is identified, reporting unsafe situations and maintaining accountable, honest and trustworthy professional practice.",
+
   rationalesIncorrect: {
-    A: "Collaboration, prompt action, and reporting are correct, but this option is incomplete because accountability and trustworthiness are also part of safe professional practice.",
-    C: "Acting quickly and being trustworthy are important, but this option leaves out teamwork and reporting unsafe situations."
+    A: "Collaborating with the team, acting promptly and reporting risks are appropriate, but this option is incomplete because accountability, honesty and trustworthiness are also part of safe professional practice.",
+    C: "Taking prompt action and maintaining trustworthiness are important, but this option leaves out teamwork and reporting unsafe situations, which are also essential in patient safety."
   }
 },
-
+ 
 // Question 33
 {
   question: "A child with severe wasting, oedema, poor appetite, and signs of infection is diagnosed with severe acute malnutrition with complications. What type of care is required?",
