@@ -520,17 +520,21 @@ const questions = [
  
 // Question 33
 {
-  question: "A child with severe wasting, oedema, poor appetite, and signs of infection is diagnosed with severe acute malnutrition with complications. What type of care is required?",
+  question: "A child with severe wasting, oedema, poor appetite and signs of infection is diagnosed with severe acute malnutrition with complications. Which combination of the following types of care is required?\n\nI. Admission to hospital for close monitoring and management.\nII. Home-based care only with routine feeding and follow-up.\nIII. Specialised inpatient care, including careful feeding, treatment of infection, and prevention or correction of hypoglycaemia, hypothermia, dehydration and electrolyte imbalance.",
+
   options: {
-    A: "I and III.",
+    A: "I and III only.",
     B: "I, II and III.",
-    C: "I and II."
+    C: "I and II only."
   },
+
   correctAnswer: "A",
-  rationaleCorrect: "Severe acute malnutrition with complications requires hospitalization and specialized care. The child needs close monitoring, careful feeding, treatment of infection, and prevention or correction of hypoglycaemia, hypothermia, dehydration, and electrolyte imbalance.",
+
+  rationaleCorrect: "Severe acute malnutrition with complications requires hospital admission and specialised care. The child needs close monitoring, careful feeding, treatment of infection, and prevention or correction of hypoglycaemia, hypothermia, dehydration and electrolyte imbalance.",
+
   rationalesIncorrect: {
-    B: "Home care alone is not appropriate when medical complications are present. Home or community management is more suitable for uncomplicated cases.",
-    C: "Hospitalization is correct, but home care alone is not enough. The child needs specialized inpatient care."
+    B: "This option includes home-based care only, which is not appropriate when severe acute malnutrition is complicated by poor appetite, oedema and infection. Home or community management is more suitable for uncomplicated cases.",
+    C: "Hospital admission is correct, but home-based care only is not enough for a child with severe acute malnutrition and complications. The child requires specialised inpatient care."
   }
 },
 
@@ -584,17 +588,17 @@ const questions = [
 
 // Question 37
 {
-  question: "A child with sickle cell disease is admitted with severe limb pain due to vaso-occlusive crisis. Which nursing measures are appropriate?",
+  question: "A child with sickle cell disease is admitted with severe limb pain due to vaso-occlusive crisis. Which combination of the following nursing measures is appropriate?\n\nI. Give prescribed analgesics to relieve pain.\nII. Encourage vigorous exercise during the painful crisis.\nIII. Encourage or maintain adequate fluid intake as prescribed.\nIV. Keep the child warm and avoid exposure to cold.",
   options: {
-    A: "I, III and IV.",
-    B: "I, II and III.",
-    C: "I, II and IV."
+    A: "I, III and IV only.",
+    B: "I, II and III only.",
+    C: "I, II and IV only."
   },
   correctAnswer: "A",
-  rationaleCorrect: "Pain relief, hydration, and warmth are key interventions in sickle cell crisis. Analgesics reduce pain, fluids help reduce blood viscosity, and warmth helps prevent vasoconstriction, which can worsen sickling.",
+  rationaleCorrect: "Pain relief, hydration and warmth are key nursing measures in sickle cell crisis. Analgesics reduce pain, fluids help reduce blood viscosity, and warmth helps prevent vasoconstriction, which can worsen sickling.",
   rationalesIncorrect: {
-    B: "Analgesics and fluids are appropriate, but vigorous exercise is wrong because it increases oxygen demand and may worsen the crisis.",
-    C: "Analgesics and warmth are appropriate, but vigorous exercise is inappropriate during an acute painful crisis."
+    B: "Analgesics and fluids are appropriate, but vigorous exercise is wrong because it increases oxygen demand and may worsen the painful crisis.",
+    C: "Analgesics and warmth are appropriate, but vigorous exercise is inappropriate during an acute painful crisis. Adequate fluids are also needed to reduce sickling risk."
   }
 },
 
@@ -744,17 +748,17 @@ const questions = [
 
 // Question 47
 {
-  question: "A rural community uses a pond as its main source of domestic water. Which measures would help reduce pollution of the water source?",
+  question: "A rural community uses a pond as its main source of domestic water. Which combination of the following measures would help reduce pollution of the water source?\n\nI. Block the natural flow of water into and out of the pond.\nII. Deepen the fetching point so that cleaner water can be drawn.\nIII. Zone the pond so that fetching, washing and watering animals are done at separate points.",
   options: {
-    A: "I and II.",
-    B: "I and III.",
-    C: "II and III."
+    A: "I and II only.",
+    B: "I and III only.",
+    C: "II and III only."
   },
   correctAnswer: "C",
-  rationaleCorrect: "Deepening the fetching point can help people draw cleaner water and reduce disturbance of mud and contaminants. Zoning the pond for different purposes, such as fetching, washing, and watering animals, reduces contamination of the drinking water area.",
+  rationaleCorrect: "Deepening the fetching point can help people draw cleaner water and reduce disturbance of mud and contaminants. Zoning the pond for different purposes, such as fetching, washing and watering animals, reduces contamination of the drinking water area.",
   rationalesIncorrect: {
-    A: "Deepening the fetching point is helpful, but blocking water flow may worsen stagnation and contamination.",
-    B: "Zoning is useful, but blocking water movement is not a good pollution-control measure."
+    A: "Deepening the fetching point is helpful, but blocking natural water flow may worsen stagnation and contamination.",
+    B: "Zoning the pond is useful, but blocking natural water movement is not a good pollution-control measure."
   }
 },
 
@@ -792,17 +796,17 @@ const questions = [
 
 // Question 50
 {
-  question: "A nurse is teaching parents about injury prevention for toddlers and preschool children. Which safety measures are developmentally appropriate?",
+  question: "A nurse is teaching parents about injury prevention for toddlers and preschool children. Which combination of the following safety measures is developmentally appropriate?\n\nI. Leave small objects and harmful substances within reach so the child can learn to avoid them.\nII. Keep medicines, cleaning agents and other harmful substances out of reach.\nIII. Provide close supervision during play and daily activities.\nIV. Keep doors, gates and unsafe areas secured to prevent wandering and accidents.",
   options: {
-    A: "I, III and IV.",
-    B: "II, III and IV.",
-    C: "I, II and III."
+    A: "I, III and IV only.",
+    B: "II, III and IV only.",
+    C: "I, II and III only."
   },
   correctAnswer: "B",
-  rationaleCorrect: "Toddlers and preschool children are curious and active, but they do not fully understand danger. Harmful substances should be kept out of reach, constant supervision is needed, and doors should be kept closed to prevent wandering, falls, burns, drowning, and poisoning.",
+  rationaleCorrect: "Toddlers and preschool children are curious and active, but they do not fully understand danger. Harmful substances should be kept out of reach, close supervision is needed, and doors or gates should be secured to prevent wandering, falls, burns, drowning and poisoning.",
   rationalesIncorrect: {
-    A: "Supervision and keeping doors closed are useful, but this option leaves out keeping harmful substances away, which is a major safety measure.",
-    C: "Keeping harmful substances away and supervision are correct, but keeping doors closed is also important for this age group."
+    A: "Supervision and securing doors or gates are useful, but this option wrongly includes leaving small objects and harmful substances within reach and leaves out keeping harmful substances away.",
+    C: "Keeping harmful substances away and supervision are correct, but this option wrongly includes leaving hazards within reach and leaves out securing doors, gates and unsafe areas."
   }
 },
 
@@ -821,17 +825,20 @@ const questions = [
     B: "Asking whether the patient can raise her arms may help with positioning, but it is not the most important safety question."
   }
 },
-
 // Question 52
 {
   question: "A young woman asks why females are more likely than males to develop cystitis. Which explanation is most accurate?",
+
   options: {
     A: "The urethra is close to the anus.",
     B: "The female urethra is shorter.",
     C: "Females have altered urinary pH."
   },
+
   correctAnswer: "B",
+
   rationaleCorrect: "Females are more prone to cystitis because the urethra is shorter, allowing bacteria to travel more easily from the outside into the bladder. The short distance makes ascending urinary tract infection more likely.",
+
   rationalesIncorrect: {
     A: "The closeness of the urethra to the anus also contributes to infection risk, but the shorter urethra is the stronger anatomical reason.",
     C: "Urinary pH may vary, but it is not the main reason females have a higher risk of cystitis."
@@ -840,33 +847,41 @@ const questions = [
 
 // Question 53
 {
-  question: "A child becomes frightened whenever injections are mentioned. Which nursing actions would help the child cope better with procedures?",
+  question: "A child becomes frightened whenever injections are mentioned. Which combination of the following nursing actions would help the child cope better with procedures?\n\nI. Comfort or praise the child after the procedure.\nII. Give a simple and honest explanation appropriate to the child’s age.\nIII. Avoid surprising the child with the injection or procedure.\nIV. Allow the child to express fear, cry, or ask questions.",
+
   options: {
-    A: "I and III.",
+    A: "I and III only.",
     B: "I, II, III and IV.",
-    C: "II, III and IV."
+    C: "II, III and IV only."
   },
+
   correctAnswer: "B",
-  rationaleCorrect: "Children cope better when they are prepared honestly and supported emotionally. Praise or comfort after the procedure reassures the child, simple explanations build trust, avoiding surprise reduces fear, and allowing expression of distress supports emotional adjustment.",
+
+  rationaleCorrect: "Children cope better when they are prepared honestly and supported emotionally. Comfort or praise after the procedure reassures the child, simple explanations build trust, avoiding surprise reduces fear, and allowing expression of distress supports emotional adjustment.",
+
   rationalesIncorrect: {
-    A: "Comfort and avoiding surprise are helpful, but this option leaves out explanation and emotional support.",
-    C: "Simple explanation, avoiding surprise, and allowing expression of feelings are correct, but the child should also be comforted or praised after the procedure."
+    A: "Comforting the child and avoiding surprise are helpful, but this option leaves out simple explanation and emotional support, which are also important in helping the child cope.",
+    C: "Simple explanation, avoiding surprise and allowing expression of feelings are correct, but the child should also be comforted or praised after the procedure to provide reassurance."
   }
 },
 
 // Question 54
 {
-  question: "A patient has an inflamed joint with pain, swelling, redness, and heat. Which general nursing principle is important in managing inflammation?",
+  question: "A patient has an inflamed joint with pain, swelling, redness and heat. Which general nursing principle is important in managing inflammation?",
+
   options: {
     A: "Raising the foot end of the bed.",
     B: "Resting the affected part and the body.",
     C: "Providing clean bed linen only."
   },
+
   correctAnswer: "B",
-  rationaleCorrect: "Rest is a fundamental principle in managing inflammation because movement can increase pain, swelling, and tissue irritation. Resting the affected area reduces metabolic demand, prevents further injury, and supports healing.",
+
+  rationaleCorrect: "Resting the affected part and the body helps reduce further irritation, pain and tissue demand during inflammation. Rest is a basic nursing measure that supports healing and prevents worsening of the inflammatory response.",
+
   rationalesIncorrect: {
-    A: "Elevation may help in some cases of swelling, especially in limbs, but it is not the broad fundamental principle for managing inflammation.",
-    C: "Clean bed linen promotes comfort and hygiene, but it does not directly manage inflammation."
+    A: "Raising the foot end of the bed may be useful in some situations, such as improving venous return, but it is not the general principle for managing an inflamed joint.",
+    C: "Providing clean bed linen promotes comfort and hygiene, but it does not directly address the main nursing principle required in managing inflammation."
   }
 },
 
