@@ -76,7 +76,7 @@
   <div id="passwordGate" class="password-gate">
     <div class="password-box">
       <h2>Enter Quiz Password</h2>
-      <p>Please enter the EliteNurses password to access the quiz.</p>
+      <p>Please enter the EliteMock password to access the quiz.</p>
 
       <input 
         type="password" 
@@ -156,7 +156,7 @@
   <script src="script.js"></script>
 
   <script>
-    const correctPassword = "EliteNurses@2026";
+    const correctPassword = "EliteMock@2026";
 
     const passwordGate = document.getElementById("passwordGate");
     const quizContent = document.getElementById("quizContent");
@@ -170,7 +170,7 @@
       if (enteredPassword === correctPassword) {
         passwordGate.style.display = "none";
         quizContent.style.display = "block";
-        sessionStorage.setItem("quizUnlocked", "true");
+        sessionStorage.setItem("quizUnlocked_v2", "true");
       } else {
         passwordError.textContent = "Incorrect password. Please try again.";
         quizPassword.value = "";
@@ -186,7 +186,7 @@
       }
     });
 
-    if (sessionStorage.getItem("quizUnlocked") === "true") {
+    if (sessionStorage.getItem("quizUnlocked_v2") === "true") {
       passwordGate.style.display = "none";
       quizContent.style.display = "block";
     }
